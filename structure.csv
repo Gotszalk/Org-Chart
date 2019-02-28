@@ -1,0 +1,14 @@
+Name,Title,Manager
+Johnny,CEO,1
+Martha,FCO,Johnny
+Coco,Financial Spec,Martha
+Lolo,CTO,Johnny
+Carl,IT,Lolo
+Luigi,IT,Lolo
+Hans,Team Lead,Lolo
+Georg,IT Spec,Hans
+Rita,IT Spec,Hans
+Ilya,IT Spec,Hans
+Kornel,Team Lead,Lolo
+Sean,IT Support,Kornel
+Petro,IT Support,Kornel
