@@ -52,9 +52,9 @@ def generateLevel (parents, structure, level)
  #define level per node
  hindex = level +1
  
- parents.each do |parent|
-  parent[3] = hindex
- end
+# parents.each do |parent|
+ # parent[3] = hindex
+ #end
  
  parents.each do |parent|
   children = findChildren(parent[0], structure)
@@ -66,7 +66,7 @@ def generateLevel (parents, structure, level)
   
   content += '<li>
                 <div>
-                    <h' + parent[3].to_s + '>' + parent[0].to_s + '<br />' + parent[1].to_s + '</'+ parent[3].to_s + '>
+                    ' + parent[0].to_s + '<br />' + parent[1].to_s + '
                 </div>
                 '
   
