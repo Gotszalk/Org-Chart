@@ -46,16 +46,9 @@ def findChildren (parent, structure)
 end
 
 # returns content 
-def generateLevel (parents, structure, level)
+def generateLevel (parents, structure)
  content = ''
- 
- #define level per node
- hindex = level +1
- 
-# parents.each do |parent|
- # parent[3] = hindex
- #end
- 
+  
  parents.each do |parent|
   children = findChildren(parent[0], structure)
   
@@ -73,9 +66,8 @@ def generateLevel (parents, structure, level)
   if children.size > 0
   #recurence if there are children
    
-   level += 1
    content += '<ol>
-   ' + generateLevel(children, structure, level) + '
+   ' + generateLevel(children, structure) + '
    </ol>
    '
   
@@ -92,10 +84,11 @@ uberfather = findChildren('1', structure)
 #puts structure[2][0]
 #puts 'uberfather' + uberfather.to_s
 
-content = generateLevel(uberfather, structure, 0)
+content = generateLevel(uberfather, structure)
 
 #puts content
 
+#create result.html
  template = 'template.html'
   
 renderer = ERB.new(File.read(template))
